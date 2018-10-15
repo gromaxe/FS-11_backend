@@ -13,10 +13,10 @@ def app(environ, start_response):
     for i,k in environ.items():
         environ_dump[str(i)]=str(k)
     environ_dump = json.dumps(environ_dump)
-    resp_str =  json.dumps( {'time': datetime.datetime.now().strftime('%H:%M:%S'), 'url':environ['RAW_URI']} )
-    #return [bytes(resp_str, 'utf-8')]
+    resp_str =  json.dumps( {'time': datetime.datetime.now().strftime('%H:%M:%S'), 'url':environ['HTTP_HOST']+environ['RAW_URI']} )
+    return [bytes(resp_str, 'utf-8')]
     #return [bytes(environ_dump, 'utf-8')]
-    return [bytes(request_uri(environ)+'\n', 'utf-8')]
+    #return [bytes(request_uri(environ)+'\n', 'utf-8')]
 
 
 if __name__ == '__main__':
