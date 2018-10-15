@@ -1,0 +1,13 @@
+Running 10s test @ http://gromaxe.com/public/0.jpg
+  4 threads and 5 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.48us   71.01us   5.90ms   99.10%
+    Req/Sec    25.23k     3.85k   30.45k    78.22%
+  Latency Distribution
+     50%   32.00us
+     75%   42.00us
+     90%   63.00us
+     99%  108.00us
+  1014169 requests in 10.10s, 6.29GB read
+Requests/sec: 100417.34
+Transfer/sec:    638.18MB
